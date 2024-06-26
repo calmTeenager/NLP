@@ -82,6 +82,7 @@ class ResNetBlock(nn.Module):
         x += identity
         x = self.relu(x)
         return x
+        
 class BaselineResNet(nn.Module):
     def __init__(self, embed_size):
         super(BaselineResNet, self).__init__()
@@ -96,6 +97,7 @@ class BaselineResNet(nn.Module):
         self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         self.fc = nn.Linear(1024, embed_size)
         self.sigmod = nn.Sigmoid()
+        
     def forward(self, images): # images: batch,3,224,224
         x = self.conv1(images)
         x = self.bn1(x)
