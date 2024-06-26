@@ -33,7 +33,7 @@ def learning_curve_plot(save_path, csv_path, show=False, image_name="Learning Cu
     plt.close(fig)
 
 # 绘制学习曲线
-result_dir = "./result20240625_031112"
+result_dir = "./result"
 learning_curve_plot(save_path=result_dir,
                     csv_path=os.path.join(result_dir, "loss_data.csv"),
                     show=False, image_name="Learning Curve")
